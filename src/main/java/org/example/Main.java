@@ -3,31 +3,31 @@ package org.example;
 public class Main {
     public static void main(String[] args) {
 
-        double rectangleHeight = 5;
-        double rectangleWidth = 10;
-
-        double resOfPerimeter = (rectangleWidth + rectangleHeight) * 2;
-        System.out.println("Периметер квадрата: " + resOfPerimeter);
-
-        double eachSizeOfRectangle = (resOfPerimeter / 4);
-        double resOfArea = eachSizeOfRectangle * eachSizeOfRectangle;
-        System.out.println("Площадь квадрата: " + resOfArea);
-
-
-        double pi = 3.14;
-        double radiusOfCircle = 10;
-        double diameterOfCircle = radiusOfCircle * 2;
-
-        double areaOfCircleWithDiameter = ((diameterOfCircle * diameterOfCircle) / 4) * pi;
-
-        double areaOfCircleWithRadius =  pi * (radiusOfCircle * radiusOfCircle);
-
-        System.out.println("Площадь круга через радиус: " + areaOfCircleWithRadius);
-        System.out.println("Площадь круга через диаметер: " + areaOfCircleWithDiameter);
-
-
 
 
 
     }
+
+    private double calculatePerimeterOfRectangle(double height, double width){
+        double resOfPerimeter = (height + width) * 2;
+        return resOfPerimeter;
+    }
+
+    private double calculateSizeOfRectangle(double perimeter){
+        double eachSizeOfRectangle = perimeter / 4;
+        double resOfArea = eachSizeOfRectangle * eachSizeOfRectangle;
+        return resOfArea;
+    }
+
+    private double calculateOfCircleWithRadius(double radius){
+        double resOfCircleArea =  Math.PI * (radius * radius);
+        return resOfCircleArea;
+    }
+
+    private double calculateOfCircleWithDiameter(double radius){
+        double resOfDiameter = radius * 2;
+        double resOfCircle = ((resOfDiameter * resOfDiameter) / 4) * Math.PI;
+        return resOfCircle;
+    }
+
 }
