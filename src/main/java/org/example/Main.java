@@ -3,8 +3,19 @@ package org.example;
 public class Main {
     public static void main(String[] args) {
 
+        Main obj = new Main();
 
+        double res1 = obj.calculatePerimeterOfRectangle(5, 10);
+        System.out.println("Периметр квадрата: " + res1);
 
+        double res2 = obj.calculateSizeOfRectangle(res1);
+        System.out.println("Площадь прямоугольника: " + res2);
+
+        double res3 = obj.calculateOfCircleWithRadius(10);
+        System.out.println("Площадь круга через радиус: " + res3);
+
+        double res4 = obj.calculateOfCircleWithDiameter(res3);
+        System.out.println("Площадь круга через диаметр: " + res4);
 
     }
 
